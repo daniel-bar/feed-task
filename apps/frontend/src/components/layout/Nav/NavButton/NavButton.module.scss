@@ -1,0 +1,38 @@
+@use 'sass:map';
+
+@use '@/styles/variables.scss';
+
+.button {
+	display: flex;
+	align-items: center;
+	padding: 17.5px;
+
+	&__icon {
+		fill: map.get(variables.$colors, whites-white);
+	}
+
+	&__text {
+		margin-inline-start: 10.25px;
+		font-size: 1.6rem;
+		font-weight: 500;
+		color: map.get(variables.$colors, main-gray);
+	}
+}
+
+.button--selected {
+	display: flex;
+	align-items: center;
+	padding: 17.5px;
+	border-bottom: 2px solid map.get(variables.$colors, selected-nav-button-green);
+
+	&__icon {
+		fill: map.get(variables.$colors, whites-white);
+	}
+
+	&__text {
+		margin-inline-start: 10.25px;
+		font-size: 1.6rem;
+		font-weight: 500;
+		color: map.get(variables.$colors, selected-nav-button-green);
+	}
+}

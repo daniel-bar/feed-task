@@ -1,0 +1,63 @@
+@use 'sass:map';
+
+@use '@/styles/variables.scss';
+
+.container {
+	display: flex;
+	align-items: center;
+	padding-inline: 16px;
+	background-color: map.get(variables.$colors, whites-white);
+	border-radius: 32px;
+	box-shadow: inset 0 0 0 2px map.get(variables.$colors, main-gray);
+	transition: 0.3s ease-in box-shadow;
+
+	&__input {
+		width: 100%;
+		padding-block: 8px;
+		font-size: 1.5rem;
+		background-color: transparent;
+
+		&::placeholder {
+			opacity: 1;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		box-shadow: inset 0 0 0 2px map.get(variables.$colors, main-gray);
+	}
+}
+
+.inputIconContainer {
+	display: flex;
+	align-items: center;
+	width: 216px;
+	padding-inline: 16px;
+	margin-inline-start: 12px;
+	background-color: map.get(variables.$colors, input-background-white);
+	border-radius: 32px;
+	transition: 0.3s ease-in box-shadow;
+
+	&__icon {
+		width: auto;
+		height: 20px;
+		margin-inline-end: 8px;
+		fill: none;
+	}
+
+	&__input {
+		width: 100%;
+		padding-block: 8px;
+		font-size: 1.5rem;
+		background-color: map.get(variables.$colors, input-background-white);
+
+		&::placeholder {
+			opacity: 1;
+		}
+	}
+
+	&:hover,
+	&:focus {
+		box-shadow: inset 0 0 0 2px map.get(variables.$colors, main-gray);
+	}
+}

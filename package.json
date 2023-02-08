@@ -1,0 +1,38 @@
+{
+	"name": "tedooo-task",
+	"version": "1.0.0",
+	"description": "Task for tedooo",
+	"main": "index.js",
+	"scripts": {
+		"preinstall": "npx only-allow pnpm",
+		"git:config": "git config --local include.path ../.gitconfig",
+		"type-check:root": "tsc --project ./tsconfig.json",
+		"depcheck:root": "depcheck --config ./.depcheckrc.json",
+		"prettier": "prettier --check **/*.{ts,js,cjs,json,yaml}",
+		"lint:root": "eslint -c ./.eslintrc.cjs --ignore-pattern 'apps' --resolve-plugins-relative-to ."
+	},
+	"devDependencies": {
+		"@commitlint/cli": "17.3.0",
+		"@exlint.io/inflint": "1.2.9",
+		"@types/node": "17.0.33",
+		"@typescript-eslint/eslint-plugin": "5.47.1",
+		"@typescript-eslint/parser": "5.47.1",
+		"commitizen": "4.2.6",
+		"cz-vinyl": "1.6.2",
+		"depcheck": "1.4.3",
+		"dotenv-cli": "6.0.0",
+		"eslint": "8.30.0",
+		"eslint-config-prettier": "8.5.0",
+		"eslint-plugin-deprecation": "1.3.3",
+		"eslint-plugin-import": "2.26.0",
+		"eslint-plugin-unused-imports": "2.0.0",
+		"pnpm": "7.20.0",
+		"prettier": "2.8.1",
+		"rimraf": "3.0.2",
+		"stylelint": "14.16.0",
+		"typescript": "4.9.4"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}

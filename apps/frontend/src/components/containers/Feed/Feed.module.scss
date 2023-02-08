@@ -1,0 +1,141 @@
+@use 'sass:map';
+
+@use '@/styles/variables.scss';
+
+.container {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	width: 80%;
+	padding-block-end: 32px;
+	margin-block-start: 62px;
+
+	.post {
+		min-height: 734px;
+		max-height: 734px;
+		padding-block-start: 24px;
+		margin-block-start: 24px;
+		background-color: map.get(variables.$colors, whites-white);
+		border-radius: 4px;
+		box-shadow: 0 1px 7px map.get(variables.$colors, post-box-shadow);
+
+		.avatarDetailsWrapper {
+			display: flex;
+			align-items: flex-start;
+			margin-inline-start: 24px;
+
+			&__img {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+				object-fit: cover;
+			}
+
+			.details {
+				display: flex;
+				flex-direction: column;
+				margin-inline-start: 12px;
+
+				&__username {
+					font-size: 1.5rem;
+					font-weight: 500;
+					color: map.get(variables.$colors, post-username-black);
+				}
+
+				.shopName {
+					display: flex;
+					align-items: center;
+					color: map.get(variables.$colors, main-gray);
+
+					&__name {
+						font-size: 1.4rem;
+						font-weight: 500;
+						color: map.get(variables.$colors, button-blue);
+					}
+
+					&__date {
+						font-size: 1.3rem;
+						font-weight: 400;
+						color: map.get(variables.$colors, main-gray);
+					}
+				}
+			}
+		}
+
+		&__text {
+			min-height: 20px;
+			max-height: 20px;
+			margin-block-start: 16px;
+			margin-inline-start: 24px;
+			font-size: 1.4rem;
+			font-weight: 400;
+			text-size-adjust: 80%;
+		}
+
+		&__imagesWrapper {
+			display: flex;
+			margin-block-start: 16px;
+
+			.img {
+				width: 100%;
+				height: 517px;
+			}
+		}
+
+		.postStats {
+			display: flex;
+			justify-content: space-between;
+			margin-block-start: 16px;
+			margin-inline-start: 24px;
+			margin-inline-end: 25px;
+
+			&__likes {
+				display: flex;
+				align-items: center;
+				font-size: 1.4rem;
+				font-weight: 400;
+				color: #737877;
+
+				.icon {
+					margin-inline-end: 8px;
+				}
+			}
+
+			&__comments {
+				font-size: 1.4rem;
+				font-weight: 400;
+				color: map.get(variables.$colors, stats-grey);
+			}
+		}
+
+		&__divider {
+			height: 1px;
+			margin-block-start: 16px;
+			margin-inline: 24px;
+			color: map.get(variables.$colors, divider-grey);
+			background-color: map.get(variables.$colors, divider-grey);
+		}
+
+		&__actions {
+			display: flex;
+			justify-content: space-around;
+			margin-block-start: 13px;
+
+			.button {
+				display: flex;
+				align-items: center;
+				color: map.get(variables.$colors, stats-grey);
+
+				&__icon {
+					margin-inline-end: 8px;
+					fill: map.get(variables.$colors, stats-grey);
+				}
+
+				&__text {
+					font-size: 1.4rem;
+					font-weight: 500;
+				}
+			}
+		}
+	}
+}

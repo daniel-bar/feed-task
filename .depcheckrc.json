@@ -1,0 +1,12 @@
+{
+	"ignores": [
+		"pnpm",
+		"commitizen",
+		"prettier",
+		"@commitlint/cli",
+		"@types/node",
+		"stylelint",
+		"dotenv-cli",
+		"rimraf"
+	]
+}

@@ -1,0 +1,21 @@
+$colors: (
+	button-blue: #0a66c2,
+	actions-button-grey: #737877,
+	input-background-white: #f4f5f5,
+	reds-persian-plum: #b41e1e,
+	nav-box-shadow: #6d6d6d0a,
+	post-box-shadow: #282f2d12,
+	post-username-black: #282f2d,
+	selected-nav-button-green: #2db8a1,
+	main-gray: #949796,
+	divider-grey: #e9eaea,
+	stats-grey: #737877,
+	whites-white: #fefefe,
+	blacks-black: #14131b,
+);
+
+:export {
+	@each $key, $value in $colors {
+		#{unquote($key)}: $value;
+	}
+}

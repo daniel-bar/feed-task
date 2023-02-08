@@ -1,0 +1,39 @@
+@use 'sass:map';
+
+@use '@/styles/variables.scss';
+
+.container {
+	position: fixed;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100vw;
+	height: 58px;
+	min-height: 58px;
+	background-color: map.get(variables.$colors, whites-white);
+	box-shadow: 0 7px 7px map.get(variables.$colors, nav-box-shadow);
+
+	.leftContainer {
+		display: flex;
+		margin-inline-start: 160px;
+
+		&__logo {
+			width: 40px;
+			height: 40px;
+		}
+	}
+
+	.rightContainer {
+		display: flex;
+		align-items: center;
+		margin-inline-end: 160px;
+	}
+
+	&__img {
+		width: 40px;
+		height: 40px;
+		margin-inline-start: 16px;
+		border-radius: 50%;
+		object-fit: cover;
+	}
+}
