@@ -47,5 +47,4 @@ In the first server process, a script will load from the scripts folder. It will
 
 Also, I've included the envs for convenience reasons.
 
-It was a really nice task :).
-"# feed-task" 
+It was a really fun task :)
